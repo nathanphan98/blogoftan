@@ -1,4 +1,5 @@
 <?php
+echo 1;
 include "header.php";
 include "includes/blogs.php";
 include "includes/tags.php";

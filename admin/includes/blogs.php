@@ -211,6 +211,8 @@ class blog{
 		          	  f_post_status = :blog_post_status,
 		          	  d_date_created = :date_created,
 		          	  d_time_created = :time_created,
+					  d_date_updated = :date_created,
+		          	  d_time_updated = :time_created,
 					  n_user_id = :user_id";		
 		//Prepare statement
 		$stmt = $this->conn->prepare($query);
@@ -236,6 +238,8 @@ class blog{
 		$stmt->bindParam(':blog_post_status',$this->f_post_status);		
 		$stmt->bindParam(':date_created',$this->d_date_created);
 		$stmt->bindParam(':time_created',$this->d_time_created);
+		$stmt->bindParam(':date_updated',$this->d_date_created);
+		$stmt->bindParam(':time_updated',$this->d_time_created);
 		$stmt->bindParam(':user_id',$this->n_user_id);
 
 		//Execute query

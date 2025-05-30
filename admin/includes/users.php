@@ -92,7 +92,7 @@ class user{
 		$stmt = $this->conn->prepare($query);
 
 		//Clean data
-		$this->message = htmlspecialchars(strip_tags($this->v_message));
+		$this->v_message = htmlspecialchars(strip_tags($this->v_message));
 		
 		//Bind data
 		$stmt->bindParam(':user_id',$this->n_user_id);
@@ -135,7 +135,7 @@ class user{
 		$stmt = $this->conn->prepare($query);
 
 		//Clean data
-		$this->message = htmlspecialchars(strip_tags($this->v_message));
+		$this->v_message = htmlspecialchars(strip_tags($this->v_message));
 
 		//Bind data
 		$stmt->bindParam(':user_id',$this->n_user_id);
